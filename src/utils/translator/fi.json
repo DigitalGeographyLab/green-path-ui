@@ -27,6 +27,8 @@
   "basemap_selector.option.label.traffic_noise": "Liikennemelu",
   "basemap_selector.option.label.air_quality": "Ilmanlaatu",
   "basemap_selector.option.label.satellite": "Ilmakuva",
+  "basemap.air_quality.legend.label.good": "hyvä",
+  "basemap.air_quality.legend.label.bad": "huono",
   "noise_level_label.very_quiet": "hiljainen",
   "noise_level_label.quiet": "melko hiljainen",
   "noise_level_label.moderate_noise": "osin meluisa",

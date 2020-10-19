@@ -27,6 +27,8 @@
   "basemap_selector.option.label.traffic_noise": "Traffic noise",
   "basemap_selector.option.label.air_quality": "Air quality",
   "basemap_selector.option.label.satellite": "Satellite",
+  "basemap.air_quality.legend.label.good": "good",
+  "basemap.air_quality.legend.label.bad": "bad",
   "noise_level_label.very_quiet": "very quiet",
   "noise_level_label.quiet": "quiet",
   "noise_level_label.moderate_noise": "moderate noise",
