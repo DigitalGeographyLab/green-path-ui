@@ -6,7 +6,8 @@ import { Action } from 'redux'
 
 export enum Lang {
   FI = 'fi',
-  EN = 'en'
+  EN = 'en',
+  SV = 'sv'
 }
 
 const initialMenuState: UiReducer = {
@@ -45,10 +46,16 @@ const uiReducer = (store: UiReducer = initialMenuState, action: UiAction): UiRed
 
 export const toggleLanguage = (lang: Lang) => {
   return (dispatch: any) => {
-    const toggleToLang = lang === Lang.FI ? Lang.EN : Lang.FI
-    Cookies.set('gp-lang', toggleToLang)
-    localStorage.setItem('gp-lang', toggleToLang)
-    dispatch({ type: 'TOGGLE_LANG', lang: toggleToLang })
+    const toggleToLang = lang === Lang.EN ? Lang.FI : lang === Lang.FI ? Lang.SV : Lang.EN
+    dispatch(setLanguage(toggleToLang))
+  }
+}
+
+export const setLanguage = (lang: Lang) => {
+  return (dispatch: any) => {
+    Cookies.set('gp-lang', lang)
+    localStorage.setItem('gp-lang', lang)
+    dispatch({ type: 'TOGGLE_LANG', lang })
   }
 }
 

@@ -10,11 +10,14 @@ interface PropsType {
 class Translate extends PureComponent<PropsType & PropsFromRedux> {
 
   translateWord(lang: Lang, rawKey: string): string {
-    const key = rawKey.toLowerCase().trim()
+    const key = rawKey.trim()
     try {
       const dict = dictionary(lang)
       if (key in dict) {
         return dict[key]
+      } else if (lang === Lang.SV && key in dictionary(Lang.EN)) {
+        // let's translate Swedish to English if missing translation
+        return dictionary(Lang.EN)[key]
       } else {
         return rawKey
       }

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { connect, ConnectedProps } from 'react-redux'
-import { toggleLanguage, Lang } from './../../reducers/uiReducer'
+import { setLanguage, Lang } from './../../reducers/uiReducer'
 
 const ButtonPair = styled.div`
   display: flex;
@@ -39,15 +39,23 @@ const ToggleLanguageButtons = (props: PropsFromRedux & { size: number }) => {
         size={props.size}
         disabled={props.lang === Lang.FI}
         selected={props.lang === Lang.FI}
-        onClick={() => props.toggleLanguage(props.lang)}>
+        onClick={() => props.setLanguage(Lang.FI)}>
         FI
         </StyledButton>
+      <StyledButton
+        id='set-lang-sv-button'
+        size={props.size}
+        disabled={props.lang === Lang.SV}
+        selected={props.lang === Lang.SV}
+        onClick={() => props.setLanguage(Lang.SV)}>
+        SV
+      </StyledButton>
       <StyledButton
         id='set-lang-en-button'
         size={props.size}
         disabled={props.lang === Lang.EN}
         selected={props.lang === Lang.EN}
-        onClick={() => props.toggleLanguage(props.lang)}>
+        onClick={() => props.setLanguage(Lang.EN)}>
         EN
       </StyledButton>
     </ButtonPair>
@@ -58,6 +66,6 @@ const mapStateToProps = (state: ReduxState) => ({
   lang: state.ui.lang
 })
 
-const connector = connect(mapStateToProps, { toggleLanguage })
+const connector = connect(mapStateToProps, { setLanguage })
 type PropsFromRedux = ConnectedProps<typeof connector>
 export default connector(ToggleLanguageButtons)

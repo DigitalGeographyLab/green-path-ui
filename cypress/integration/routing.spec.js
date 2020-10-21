@@ -18,7 +18,7 @@ describe('Toggle language', () => {
     cy.get('#show-info-button').click()
     cy.get('#set-lang-fi-button').contains('FI').click()
     cy.contains('Tervetuloa')
-    cy.get('#toggle-lang-button').contains('EN')
+    cy.get('#toggle-lang-button').contains('SV')
     cy.get('#set-lang-en-button').within(() => {
       cy.contains('EN').click()
     })
@@ -26,16 +26,20 @@ describe('Toggle language', () => {
     cy.get('#hide-welcome-button').contains('OK').click()
   })
 
-  it('changes language from top panel (-> FI -> EN)', () => {
+  it('changes language from top panel (-> FI -> SV -> EN)', () => {
     cy.get('#toggle-lang-button').within(() => {
       cy.contains('FI').click()
     })
     cy.contains('Etsi hiljaiset reitit')
     cy.get('#toggle-lang-button').within(() => {
+      cy.contains('SV').click()
+      cy.contains('EN')
+    })
+    cy.contains('Sök tysta rutter')
+    cy.get('#toggle-lang-button').within(() => {
       cy.contains('EN').click()
       cy.contains('FI')
     })
-    cy.contains('Find quiet paths')
   })
 
   it('sets language selection to cookie (gp-lang)', () => {
@@ -45,6 +49,10 @@ describe('Toggle language', () => {
     cy.getCookie('gp-lang')
       .should('exist')
       .should('have.property', 'value', 'fi')
+    cy.get('#toggle-lang-button').click()
+    cy.getCookie('gp-lang')
+      .should('exist')
+      .should('have.property', 'value', 'sv')
     cy.get('#toggle-lang-button').click()
     cy.getCookie('gp-lang')
       .should('exist')
