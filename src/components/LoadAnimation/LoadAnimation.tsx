@@ -18,18 +18,19 @@ const Spinner = styled.div`
   }
 `
 
-const StyledLoadingIcon = styled(LoadingIcon)<{size?: number}>`
-  ${props => props.size && css<{size?: number}>`
-    height: ${props => props.size || '50'}px;
-    width: auto;
+const StyledLoadingIcon = styled(LoadingIcon)<{ size?: number }>`
+  ${(props) =>
+    props.size &&
+    css<{ size?: number }>`
+      height: ${(props) => props.size || '50'}px;
+      width: auto;
     `}
 `
 
-const LoadAnimation = ({ size }: { size: number }) => {
-
+const LoadAnimation = ({ size, color }: { size: number; color?: string }) => {
   return (
     <Spinner>
-      <StyledLoadingIcon size={size} />
+      <StyledLoadingIcon size={size} color={color ? color : '#17af40f0'} />
     </Spinner>
   )
 }
