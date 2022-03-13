@@ -181,11 +181,9 @@ const WelcomeInfo = () => {
           </P>
           <SubHeading data-cy="info-code-title"> <T>info_modal.code.title</T> </SubHeading>
           <P>
-            <Link href='https://github.com/DigitalGeographyLab/green-paths' target='_blank' rel='noopener noreferrer'>DigitalGeographyLab/green-paths</Link>{' '}
+            <Link href='https://github.com/DigitalGeographyLab/hope-green-path-server' target='_blank' rel='noopener noreferrer'>DigitalGeographyLab/hope-green-path-server</Link>{' '}
             <br />
             <Link href='https://github.com/DigitalGeographyLab/hope-green-path-ui' target='_blank' rel='noopener noreferrer'>DigitalGeographyLab/hope-green-path-ui</Link>{' '}
-            <br />
-            <Link href='https://github.com/DigitalGeographyLab/hope-green-path-server' target='_blank' rel='noopener noreferrer'>DigitalGeographyLab/hope-green-path-server</Link>{' '}
           </P>
           {visitedBefore && !gaDisabled && <P style={{ marginTop: '6px' }}><CookieConsent /></P>}
           <SmallText style={{ marginTop: '8px' }}>
