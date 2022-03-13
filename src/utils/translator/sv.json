@@ -96,7 +96,6 @@
   "info_modal.welcome.title": "Välkommen till Green Paths ruttplanerare",
   "info_modal.cookie.info": "Denna webbplats använder kakor för att samla information om användarmängden. På grund av detta sänds en del information (t.ex. IP-adressen) till Google. Genom att klicka OK nedan tillåter du användningen av kakor. Alernativt kan du blockera användningen av kakor och hindra analytiken:",
   "info_modal.cookie.disable_button_label": "Blockera analytiska kakor",
-  "info_modal.dev_status_info": "Applikationen och luftkvalitetsmodelleringen den använder är ännu under utveckling och tjänsten är därför inte alltid tillgänglig.",
 
   "info_modal.problem.title": "Problem",
   "info_modal.problem.content": "Där ren luft, tystnad och grönska är nyttiga för hälsan kan exponering för luftföroreningar och buller förorsaka otaliga hälsoproblem. Lyckligtvis kan en renare, lugnare och grönare rutt vara bara marginellt längre än den kortaste rutten.",

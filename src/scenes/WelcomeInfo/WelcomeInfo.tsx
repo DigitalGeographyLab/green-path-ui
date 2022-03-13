@@ -11,7 +11,7 @@ import UIALogo from '../Images/logo_uia_2.png'
 import EU from '../Images/EU.png'
 import ToggleLanguageButtons from './ToggleLanguageButtons'
 import T from '../../utils/translator/Translator'
-import { text } from '../../utils/translator/dictionary'
+// import { text } from '../../utils/translator/dictionary'
 import { ReduxState } from '../../types'
 
 const InfoWrapper = styled.div`
@@ -68,7 +68,12 @@ const P = styled.div`
   font-size: 14px;
   letter-spacing: 0.5px;
   color: rgb(40, 40, 40);
+  `
+
+const PBold = styled(P)`
+  font-weight: 500;
 `
+
 const SponsorsDiv = styled.div<{ raiseLogos: boolean }>`
   position: initial;
   bottom: 0;
@@ -129,18 +134,16 @@ const WelcomeInfo = () => {
       <InfoContainer gaDisabled={gaDisabled}>
         <ContentContainer data-cy="welcome-info-content" onClick={() => setRaiseLogos(false)} onScroll={() => setRaiseLogos(false)}>
           <ToggleLanguageButtons size={16} />
-          <Title><T>info_modal.welcome.title</T> (demo)!</Title>
+          <Title><T>info_modal.welcome.title</T>!</Title>
           {!visitedBefore && !gaDisabled && <P><CookieConsent /></P>}
-          <P>
-            <SmallText>
-              <T>info_modal.dev_status_info</T>
-            </SmallText>
-          </P>
-          <SubHeading><T>info_modal.user_feedback.title</T></SubHeading>
-          <P>
+          <PBold>
+            <T>info_modal.dev_status_info</T>
+          </PBold>
+          {/* <SubHeading><T>info_modal.user_feedback.title</T></SubHeading> */}
+          {/* <P>
             <T>info_modal.user_feedback.content_1</T><Link href={text(ui.lang, 'info_modal.user_feedback.link_address')}
               target='_blank' rel='noopener noreferrer'><T>info_modal.user_feedback.link_label</T></Link>
-          </P>
+          </P> */}
           <SubHeading><T>info_modal.problem.title</T></SubHeading>
           <P>
             <T>info_modal.problem.content</T>
