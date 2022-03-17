@@ -52,17 +52,19 @@ export const setStateFromUrl = (urlState: UrlState, location: any, history: any)
   }
 }
 
+const visitedKeyName = 'visited_22_03_17'
+
 export const setVisitedStatusVisited = () => {
   return async (dispatch: any) => {
-    Cookies.set('visited', 'yes', { expires: 5184000 })
-    localStorage.setItem('visited', 'yes')
+    Cookies.set(visitedKeyName, 'yes', { expires: 5184000 })
+    localStorage.setItem(visitedKeyName, 'yes')
     dispatch({ type: 'VISITED_BEFORE' })
   }
 }
 
 export const getVisitedStatus = () => {
-  const visitedC = Cookies.get('visited')
-  const visitedLs = localStorage.getItem('visited')
+  const visitedC = Cookies.get(visitedKeyName)
+  const visitedLs = localStorage.getItem(visitedKeyName)
   if (visitedC === 'yes' || visitedLs === 'yes') return true
   return false
 }
