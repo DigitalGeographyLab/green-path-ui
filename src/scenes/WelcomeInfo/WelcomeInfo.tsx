@@ -143,11 +143,11 @@ const WelcomeInfo = () => {
         <ContentContainer data-cy="welcome-info-content" onClick={() => setRaiseLogos(false)} onScroll={() => setRaiseLogos(false)}>
           <ToggleLanguageButtons size={16} />
           <Title><T>info_modal.welcome.title</T>!</Title>
-          {!visitedBefore && !gaDisabled && <P><CookieConsent /></P>}
           <WarningP>
             <div><RiErrorWarningLine color="#faad14" size={25}/></div>
             <div><T>info_modal.dev_status_info</T></div>
           </WarningP>
+          {!visitedBefore && !gaDisabled && <P><CookieConsent /></P>}
           <SubHeading><T>info_modal.problem.title</T></SubHeading>
           <P>
             <T>info_modal.problem.content</T>
