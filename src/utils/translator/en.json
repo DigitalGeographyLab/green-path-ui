@@ -96,7 +96,7 @@
   "info_modal.welcome.title": "Welcome to Green Paths",
   "info_modal.cookie.info": "This site uses cookies to log anonymous visitor counts via Google Analytics, and thus some information of your browser (e.g. IP address) is shared with Google. By clicking OK below, you accept this use of cookies. Alternatively, you can disable analytics & cookies:",
   "info_modal.cookie.disable_button_label": "Disable analytics cookies",
-  "info_modal.dev_status_info": "The app is a prototype and it is not developed or maintained currently. Therefore the app may not be functional at all times and its street data is outdated (please consider the route suggestions as potentially unrealistic).",
+  "info_modal.dev_status_info": "The app is a prototype and it is not developed or maintained currently. Therefore it may not be functional at all times and its street data is outdated (please consider the route suggestions as potentially imperfect).",
 
   "info_modal.problem.title": "Problem",
   "info_modal.problem.content": "While fresh air, quietness and greenery bring health benefits, then air pollution and excess noise may cause physical and mental health problems such as respiratory infections, cardiovascular disease or stress. Fortunately, a more peaceful, less polluted and greener (= healthier) route may be just slightly longer than the shortest one.",

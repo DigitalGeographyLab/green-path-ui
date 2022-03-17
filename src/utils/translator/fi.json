@@ -96,7 +96,7 @@
   "info_modal.welcome.title": "Tervetuloa Green Paths reittioppaaseen",
   "info_modal.cookie.info": "Tämä sivusto käyttää evästeitä kerätäkseen tietoja käyttäjämääristä. Tämän takia joitain selaimen tietoja (esim. IP osoite) lähetetään Googlelle. Klikkaamalla alta OK, hyväksyt tämän evästeiden käytön. Vaihtoehtoisesti voit estää analytiikan ja evästeet:",
   "info_modal.cookie.disable_button_label": "Estä analytiikan evästeet",
-  "info_modal.dev_status_info": "Huom! Sovellus on prototyyppi, eikä sitä enää ylläpidetä ja kehitetä aktiivisesti. Sovellus ei siksi välttämättä toimi kaikkina aikoina, eikä sen käyttämä katuverkosto ole enää ajan tasalla (reittiehdotuksiin on syytä suhtautua varauksella).",
+  "info_modal.dev_status_info": "Sovellus on prototyyppi, eikä sitä enää ylläpidetä ja kehitetä aktiivisesti. Sovellus ei siksi välttämättä toimi kaikkina aikoina, eikä sen käyttämä katuverkosto ole enää ajan tasalla (reittiehdotuksiin on syytä suhtautua varauksella).",
 
   "info_modal.problem.title": "Ongelma",
   "info_modal.problem.content": "Siinä missä puhdas ilma, hiljaisuus ja vihreys ovat terveydelle hyödyksi, altistuminen ilmansaasteille ja melulle voivat aiheuttaa lukuisia terveysongelmia. Onneksi puhtaampi, rauhallisempi ja vihreämpi reitti saattaa olla vain hieman lyhyintä reittiä pidempi.",

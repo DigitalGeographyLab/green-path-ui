@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { RiErrorWarningLine } from 'react-icons/ri'
 import styled, { css } from 'styled-components'
 import { Button } from '../../components/Button'
 import { hideInfo, Lang } from './../../reducers/uiReducer'
@@ -11,7 +12,6 @@ import UIALogo from '../Images/logo_uia_2.png'
 import EU from '../Images/EU.png'
 import ToggleLanguageButtons from './ToggleLanguageButtons'
 import T from '../../utils/translator/Translator'
-// import { text } from '../../utils/translator/dictionary'
 import { ReduxState } from '../../types'
 
 const InfoWrapper = styled.div`
@@ -70,8 +70,16 @@ const P = styled.div`
   color: rgb(40, 40, 40);
   `
 
-const PBold = styled(P)`
-  font-weight: 500;
+const WarningP = styled(P)`
+  font-weight: 450;
+  padding: 15px;;
+  border-radius: 3px;
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 `
 
 const SponsorsDiv = styled.div<{ raiseLogos: boolean }>`
@@ -136,14 +144,10 @@ const WelcomeInfo = () => {
           <ToggleLanguageButtons size={16} />
           <Title><T>info_modal.welcome.title</T>!</Title>
           {!visitedBefore && !gaDisabled && <P><CookieConsent /></P>}
-          <PBold>
-            <T>info_modal.dev_status_info</T>
-          </PBold>
-          {/* <SubHeading><T>info_modal.user_feedback.title</T></SubHeading> */}
-          {/* <P>
-            <T>info_modal.user_feedback.content_1</T><Link href={text(ui.lang, 'info_modal.user_feedback.link_address')}
-              target='_blank' rel='noopener noreferrer'><T>info_modal.user_feedback.link_label</T></Link>
-          </P> */}
+          <WarningP>
+            <div><RiErrorWarningLine color="#faad14" size={25}/></div>
+            <div><T>info_modal.dev_status_info</T></div>
+          </WarningP>
           <SubHeading><T>info_modal.problem.title</T></SubHeading>
           <P>
             <T>info_modal.problem.content</T>
