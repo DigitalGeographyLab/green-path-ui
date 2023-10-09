@@ -1,5 +1,9 @@
 import { GeocodingResult } from '../types'
 
+// edits 9.10.23 by Roope Heinonen
+// update digitansit api url to correct one
+// add api key which came mandatory
+
 const baseUrl =
   process.env.REACT_APP_DT_GEOCODING_URL || 'https://dev-api.digitransit.fi/geocoding/v1/search?'
 
