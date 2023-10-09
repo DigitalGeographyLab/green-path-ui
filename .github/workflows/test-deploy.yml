@@ -1,5 +1,7 @@
 name: Tests & Deploy
-on: [push]
+on:
+  push:
+  workflow_dispatch:
 jobs:
 
   cypress-tests:
