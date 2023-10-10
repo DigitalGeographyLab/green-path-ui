@@ -39,7 +39,7 @@ jobs:
     name: Deploy
     if: github.ref == 'refs/heads/master'
     needs: [cypress-tests]
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
