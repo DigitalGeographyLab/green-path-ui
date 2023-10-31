@@ -34,6 +34,7 @@ jobs:
           REACT_APP_FB_MSG_SENDER_ID: ${{ secrets.REACT_APP_FB_MSG_SENDER_ID }}
           REACT_APP_FB_APP_ID: ${{ secrets.REACT_APP_FB_APP_ID }}
           REACT_APP_FB_MEASUREMENT_ID: ${{ secrets.REACT_APP_FB_MEASUREMENT_ID }}
+          REACT_APP_DT_GEOCODING_KEY: ${{ secrets.REACT_APP_DT_GEOCODING_KEY }}
 
   build-deploy:
     name: Deploy
@@ -72,6 +73,7 @@ jobs:
           REACT_APP_FB_MSG_SENDER_ID: ${{ secrets.REACT_APP_FB_MSG_SENDER_ID }}
           REACT_APP_FB_APP_ID: ${{ secrets.REACT_APP_FB_APP_ID }}
           REACT_APP_FB_MEASUREMENT_ID: ${{ secrets.REACT_APP_FB_MEASUREMENT_ID }}
+          REACT_APP_DT_GEOCODING_KEY: ${{ secrets.REACT_APP_DT_GEOCODING_KEY }}
       - name: Deploy
         uses: w9jds/firebase-action@master
         with:
