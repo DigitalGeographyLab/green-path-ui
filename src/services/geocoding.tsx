@@ -5,7 +5,7 @@ import { GeocodingResult } from '../types'
 // add api key which came mandatory
 
 const baseUrl =
-  process.env.REACT_APP_DT_GEOCODING_URL || 'https://dev-api.digitransit.fi/geocoding/v1/search?'
+  process.env.REACT_APP_DT_GEOCODING_URL || 'https://api.digitransit.fi/geocoding/v1/search?'
 
 const getParamString = (params: Record<string, any>): string => {
   let str = ''
